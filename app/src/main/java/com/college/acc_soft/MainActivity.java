@@ -22,6 +22,8 @@ import com.college.acc_soft.Fragments.LibraryFragment;
 import com.college.acc_soft.Fragments.Nav_Drawer_Fragment;
 import com.college.acc_soft.Fragments.Pay_Fee_OnlineFragment;
 import com.college.acc_soft.Fragments.PlacementFragment;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements Nav_Drawer_Fragment.FragmentDrawerListner{
 
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements Nav_Drawer_Fragme
     Nav_Drawer_Fragment drawerFragment;
     DrawerLayout drawerLayout;
     String tag = "new General_InfoFragment()";
+    FirebaseAuth auth;
+    FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,15 @@ public class MainActivity extends AppCompatActivity implements Nav_Drawer_Fragme
 
         icon = findViewById(R.id.menu_btn);
         drawerLayout = findViewById(R.id.drawer_layout);
+        auth = FirebaseAuth.getInstance();
+        currentUser = auth.getCurrentUser();
+
+        if(currentUser == null){
+            Intent intent = new Intent(MainActivity.this, Login_Activity.class);
+            startActivity(intent);
+            finish();
+        }
+
         drawerFragment = (Nav_Drawer_Fragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         assert drawerFragment != null;
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
@@ -123,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements Nav_Drawer_Fragme
                 Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, Login_Activity.class);
                 startActivity(intent);
+                auth.signOut();
                 finish();
 
 

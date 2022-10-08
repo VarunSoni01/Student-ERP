@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "991343477611",
+    "project_id": "student-erp-26daf",
+    "storage_bucket": "student-erp-26daf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991343477611:android:deec5d4b93d3cff011822e",
+        "android_client_info": {
+          "package_name": "com.college.acc_soft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991343477611-f1d1kcf0rmne8v95p4gk5o9hl632rudt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmRdPhyX236Ui_wqZyBdYDZb_byUHRIWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991343477611-f1d1kcf0rmne8v95p4gk5o9hl632rudt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

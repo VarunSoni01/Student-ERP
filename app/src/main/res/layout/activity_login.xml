@@ -36,8 +36,64 @@
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="5dp"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/blue"
+        android:layout_marginHorizontal="15dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@drawable/list_design"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        android:checkedButton="@id/sel_stu"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/sel_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:buttonTint="@color/blue"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:textSize="16dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:background="@color/blue"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="40dp"/>
+
+
+        <RadioButton
+            android:id="@+id/sel_stu"
+            android:textStyle="bold"
+            android:buttonTint="@color/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student"
+
+            android:textColor="@color/blue"
+            android:textSize="16dp"/>
+
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blue"
+        android:layout_marginHorizontal="15dp"/>
+
+
+
     <RelativeLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
