@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/list_design"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginStart="20dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/stu_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Details"
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            />
+
+        <View
+            android:id="@+id/partion"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="3dp"
+            android:background="@color/blue"
+            android:layout_below="@id/stu_details"/>
+
+
+        <TextView
+            android:id="@+id/stu_sch"
+            android:layout_below="@id/partion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entet Scholar"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stu_enrol"
+            android:layout_below="@id/stu_sch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entet Enrollment No"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/stu_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/partion"
+            android:text="Entet Course derail"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stu_colname"
+            android:layout_below="@id/stu_course"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entet collage name"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    android:background="@drawable/list_design"
+    android:backgroundTint="@color/white"
+    android:elevation="10dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/backlog_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/bdivider"
+        android:text="Subject Name"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+
+    <View
+        android:id="@+id/bdivider"
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:background="@color/blue"
+        android:layout_toLeftOf="@id/backlog_sem"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="80dp"/>
+
+    <TextView
+        android:id="@+id/backlog_sem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="I Sem"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

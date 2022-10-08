@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:elevation="10dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/list_design"
+    android:backgroundTint="@color/white"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/recording_thumbnail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="10dp"
+        android:src="@drawable/profile_male_png"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/rsub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject -"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/recording_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:text="subject Name"
+            android:layout_toRightOf="@id/rsub"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rtopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Topic -"
+            android:layout_marginStart="15dp"
+            android:layout_below="@id/recording_sub"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/recording_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recording_sub"
+            android:layout_marginHorizontal="5dp"
+            android:text="Subject Topic"
+            android:layout_toRightOf="@id/rtopic"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date -"
+            android:layout_marginStart="15dp"
+            android:layout_below="@id/recording_topic"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/recording_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05/10/2022"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/rdate"
+            android:layout_marginStart="5dp"
+            android:layout_below="@id/recording_topic"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

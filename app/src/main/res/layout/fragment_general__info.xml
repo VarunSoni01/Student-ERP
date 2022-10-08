@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/dark_white"
+    android:background="@color/dark_white"
+    android:layout_height="wrap_content"
+    tools:context=".Fragments.General_InfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_white"
+        android:background="@color/dark_white"
+        android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_design"
+                android:layout_margin="10dp"
+                android:elevation="10dp"
+                android:backgroundTint="@color/dark_white"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/stu_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Details"
+                    android:textColor="@color/blue"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/partion"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/stu_details"
+                    android:layout_margin="3dp"
+                    android:background="@color/blue" />
+
+
+                <TextView
+                    android:id="@+id/stu_sch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/partion"
+                    android:text="Entet Scholar"
+                    android:textColor="@color/blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stu_enrol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stu_sch"
+                    android:text="Entet Enrollment No"
+                    android:textColor="@color/blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stu_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/partion"
+                    android:layout_alignParentEnd="true"
+                    android:text="Entet Course derail"
+                    android:textColor="@color/blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stu_colname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stu_course"
+                    android:layout_alignParentEnd="true"
+                    android:text="Entet collage name"
+                    android:textColor="@color/blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/general_info_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/general_info_list"
+            android:background="@color/dark_white"
+            />
+
+    </LinearLayout>
+
+
+</ScrollView>
