@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.college.acc_soft.Fragments.Academic_CalenderFragment;
 import com.college.acc_soft.Fragments.AssignmentsFragment;
 import com.college.acc_soft.Fragments.Examination_PaperFragment;
 import com.college.acc_soft.Fragments.News_NoticeFragment;
@@ -69,6 +70,13 @@ public class General_InfoAdapter extends RecyclerView.Adapter<General_InfoAdapte
                 public void onClick(View v) {
                     int pos = getAdapterPosition();
                     switch (pos){
+
+                        case 0:
+                            transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
+                            transaction.replace(R.id.main_framelayout, new Academic_CalenderFragment());
+                            transaction.addToBackStack(null);
+                            transaction.commit();
+                            break;
 
                         case 2:
                             transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();

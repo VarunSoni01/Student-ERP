@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/list_design"
+    android:backgroundTint="@color/white"
+    android:elevation="10dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/holiday_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 Oct"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="35dp"
+        android:background="@color/blue"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <TextView
+        android:id="@+id/holiday_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Holiday Subject"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+
+
+</LinearLayout>
