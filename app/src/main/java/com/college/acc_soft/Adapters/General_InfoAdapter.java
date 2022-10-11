@@ -15,8 +15,11 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.college.acc_soft.Fragments.AssignmentsFragment;
+import com.college.acc_soft.Fragments.Examination_PaperFragment;
 import com.college.acc_soft.Fragments.News_NoticeFragment;
 import com.college.acc_soft.Fragments.PayFeesFragment;
+import com.college.acc_soft.Fragments.Question_PaperFragment;
+import com.college.acc_soft.Fragments.SyllabusFragment;
 import com.college.acc_soft.MainActivity;
 import com.college.acc_soft.Models.General_InfoModel;
 import com.college.acc_soft.R;
@@ -67,9 +70,30 @@ public class General_InfoAdapter extends RecyclerView.Adapter<General_InfoAdapte
                     int pos = getAdapterPosition();
                     switch (pos){
 
+                        case 2:
+                            transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
+                            transaction.replace(R.id.main_framelayout, new Examination_PaperFragment());
+                            transaction.addToBackStack(null);
+                            transaction.commit();
+                            break;
+
+                        case 3:
+                            transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
+                            transaction.replace(R.id.main_framelayout, new Question_PaperFragment());
+                            transaction.addToBackStack(null);
+                            transaction.commit();
+                            break;
+
                         case 4:
                             transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
                             transaction.replace(R.id.main_framelayout, new News_NoticeFragment());
+                            transaction.addToBackStack(null);
+                            transaction.commit();
+                            break;
+
+                        case 5:
+                            transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
+                            transaction.replace(R.id.main_framelayout, new SyllabusFragment());
                             transaction.addToBackStack(null);
                             transaction.commit();
                             break;

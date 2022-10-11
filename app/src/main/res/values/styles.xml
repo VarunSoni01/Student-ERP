@@ -8,6 +8,7 @@
         <item>@string/Library</item>
         <item>@string/Placements</item>
         <item>@string/Acknowledgement</item>
+        <item>@string/admin</item>
         <item>@string/Logout</item>
     </string-array>
 
@@ -71,6 +72,11 @@
         <item>@string/knowledgecenter</item>
         <item>@string/syll</item>
         <item>@string/timetable</item>
+    </string-array>
+
+    <string-array name="admin_panel_labels">
+        <item>@string/assignment</item>
+
     </string-array>
 
     <style name="roundedimageview" parent="">

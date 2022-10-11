@@ -1,6 +1,10 @@
 package com.college.acc_soft.Adapters;
 
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
+
+import android.app.DownloadManager;
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +43,7 @@ public class Assignment_Adapter extends RecyclerView.Adapter<Assignment_Adapter.
         holder.by.setText(list.get(position).getBy());
         holder.pub_date.setText(list.get(position).getPub_date());
         holder.up_date.setText(list.get(position).getUp_date());
+        int pos = holder.getAdapterPosition();
 
         holder.upload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +56,8 @@ public class Assignment_Adapter extends RecyclerView.Adapter<Assignment_Adapter.
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Assignment Downloaded...", Toast.LENGTH_SHORT).show();
+//                downloadfile(context,list.get(pos).getSubject(), ".pptx", DIRECTORY_DOWNLOADS,list.get(pos).getLink());
+
             }
         });
 
@@ -74,5 +81,16 @@ public class Assignment_Adapter extends RecyclerView.Adapter<Assignment_Adapter.
             upload = itemView.findViewById(R.id.assignment_upload);
             download = itemView.findViewById(R.id.assignment_download);
         }
+    }
+
+    public void downloadfile(Context context, String filename, String fileExtension, String destinationDirectory, String url) {
+        DownloadManager dmanager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+        Uri uri = Uri.parse(url);
+        DownloadManager.Request req = new DownloadManager.Request(uri);
+
+        req.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        req.setDestinationInExternalFilesDir(context, destinationDirectory, filename + fileExtension);
+        dmanager.enqueue(req);
+
     }
 }

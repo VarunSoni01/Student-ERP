@@ -14,6 +14,7 @@
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.15" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/admin_panel_list.xml" value="0.16324786324786325" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/assignment_listitem.xml" value="0.22" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/attendance_list.xml" value="0.22" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/attendancesub_list.xml" value="0.1606837606837607" />
@@ -22,6 +23,7 @@
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/exam_result_listitems.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fees_receipts_listitems.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_academics.xml" value="0.2" />
+        <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_admin__panel.xml" value="0.1641025641025641" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_assignments.xml" value="0.22" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_attendance__status.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_attendance__sub_wise.xml" value="0.1641025641025641" />
@@ -31,6 +33,7 @@
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_e_online_teaching.xml" value="0.1" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_enrichment.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_exam__result.xml" value="0.2" />
+        <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_examination__paper.xml" value="0.15256410256410258" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_fees__installment.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_fees__receipts.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_general__info.xml" value="0.2" />
@@ -45,11 +48,13 @@
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_pay__fee__online.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_pay_fees.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_placement.xml" value="0.2" />
+        <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_question__paper.xml" value="0.1641025641025641" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_special__leave__request.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_student__ledger.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_syllabus.xml" value="0.1641025641025641" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_time__table.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_update__resume.xml" value="0.1641025641025641" />
+        <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_upload__assignment.xml" value="0.1641025641025641" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/general_info_list.xml" value="0.25" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/knowledge_listitems.xml" value="0.1641025641025641" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/list_item.xml" value="0.2" />

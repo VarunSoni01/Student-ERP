@@ -3,6 +3,24 @@ package com.college.acc_soft.Models;
 public class Assignment_Model {
 
     String subject;
+    String link;
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public Assignment_Model(String subject, String link, String ass_no, String by, String pub_date, String up_date) {
+        this.subject = subject;
+        this.link = link;
+        this.ass_no = ass_no;
+        this.by = by;
+        this.pub_date = pub_date;
+        this.up_date = up_date;
+    }
 
     public String getSubject() {
         return subject;
@@ -49,11 +67,4 @@ public class Assignment_Model {
     String pub_date;
     String up_date;
 
-    public Assignment_Model(String subject, String ass_no, String by, String pub_date, String up_date) {
-        this.subject = subject;
-        this.ass_no = ass_no;
-        this.by = by;
-        this.pub_date = pub_date;
-        this.up_date = up_date;
-    }
 }

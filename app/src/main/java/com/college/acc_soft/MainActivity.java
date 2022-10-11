@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.college.acc_soft.Activities.Login_Activity;
 import com.college.acc_soft.Fragments.AcademicsFragment;
+import com.college.acc_soft.Fragments.Admin_PanelFragment;
 import com.college.acc_soft.Fragments.EnrichmentFragment;
 import com.college.acc_soft.Fragments.General_InfoFragment;
 import com.college.acc_soft.Fragments.LibraryFragment;
@@ -133,6 +134,12 @@ public class MainActivity extends AppCompatActivity implements Nav_Drawer_Fragme
                 break;
 
             case 6:
+                Toast.makeText(this, "Admin Panel", Toast.LENGTH_SHORT).show();
+                loadFragment(new Admin_PanelFragment());
+                break;
+
+
+            case 7:
                 Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, Login_Activity.class);
                 startActivity(intent);

@@ -44,6 +44,7 @@ public class Nav_Drawer_Fragment extends Fragment {
             R.drawable.library_logo,
             R.drawable.placement,
             R.drawable.enrichment,
+            R.drawable.profile_male_png,
             R.drawable.logout
     };
 

@@ -2,6 +2,7 @@ package com.college.acc_soft.Fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,11 +11,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.college.acc_soft.Adapters.Assignment_Adapter;
 import com.college.acc_soft.Adapters.General_InfoAdapter;
 import com.college.acc_soft.Models.Assignment_Model;
 import com.college.acc_soft.R;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +32,7 @@ public class AssignmentsFragment extends Fragment {
     Assignment_Adapter adapter;
     List<Assignment_Model>list;
     RecyclerView recyclerView;
+    FirebaseFirestore firestore;
 
     public AssignmentsFragment() {
         // Required empty public constructor
@@ -42,29 +50,36 @@ public class AssignmentsFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_assignments, container, false);
         list = new ArrayList<>();
-
+        firestore = FirebaseFirestore.getInstance();
         recyclerView = view.findViewById(R.id.assignment_rv);
-        adapter = new Assignment_Adapter(getContext(),data());
+        adapter = new Assignment_Adapter(getContext(),list);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
+        Firestore();
+        
         return view;
     }
 
-    private List<Assignment_Model> data() {
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 1","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 2","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 3","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 4","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 5","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 6","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 7","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 8","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 9","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
-        list.add(new Assignment_Model("Theory Of Computation","Assignment No. 10","Assignment By - Arpit Sir","21/09/2022","25/09/2022"));
+    private void Firestore() {
+        firestore.collection("Assignment").addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                if(error != null){
+                    Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                for(DocumentChange dc:value.getDocumentChanges()){
+                    if(dc.getType() == DocumentChange.Type.ADDED){
+                        list.add(new Assignment_Model(dc.getDocument().getString("subject"),dc.getDocument().getString("link"),dc.getDocument().getString("ass_no"),dc.getDocument().getString("by"),dc.getDocument().getString("pub_date"),dc.getDocument().getString("up_date")));
+                    }
+                    adapter.notifyDataSetChanged();
+                }
+            }
+        });
 
-        return list;
     }
+
 }
