@@ -54,7 +54,6 @@ public class Academic_CalenderFragment extends Fragment {
         list.add(new Academics_Calender_Model("5 Oct","Dussehra Holiday"));
         list.add(new Academics_Calender_Model("5 Oct","Dussehra Holiday"));
 
-
         return list;
     }
 }

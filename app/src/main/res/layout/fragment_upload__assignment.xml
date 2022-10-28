@@ -35,23 +35,20 @@
 
 
     <EditText
+        android:id="@+id/ass_sub_name"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:hint="Enter Subject Name"
+        android:singleLine="true"
         android:background="@drawable/border"
         android:layout_margin="10dp"
         android:padding="15dp"/>
 
     <EditText
+        android:id="@+id/ass_up_date"
         android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter Subject Name"
-        android:layout_margin="10dp"
-        android:background="@drawable/border"
-        android:padding="15dp"/>
+        android:singleLine="true"
 
-    <EditText
-        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:hint="Enter Subject Name"
         android:layout_margin="10dp"
@@ -59,22 +56,18 @@
         android:padding="15dp"/>
 
     <EditText
+        android:id="@+id/ass_up_timing"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:hint="Enter Subject Name"
+        android:singleLine="true"
         android:layout_margin="10dp"
         android:background="@drawable/border"
         android:padding="15dp"/>
 
-    <EditText
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter Subject Name"
-        android:layout_margin="10dp"
-        android:background="@drawable/border"
-        android:padding="15dp"/>
 
     <Button
+        android:id="@+id/ass_up"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="Submit"

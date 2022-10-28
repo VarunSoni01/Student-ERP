@@ -1,5 +1,9 @@
 package com.college.acc_soft;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+import static com.college.acc_soft.Notification.Constants.TOPIC;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -9,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
@@ -23,17 +28,17 @@ import com.college.acc_soft.Fragments.LibraryFragment;
 import com.college.acc_soft.Fragments.Nav_Drawer_Fragment;
 import com.college.acc_soft.Fragments.Pay_Fee_OnlineFragment;
 import com.college.acc_soft.Fragments.PlacementFragment;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity implements Nav_Drawer_Fragment.FragmentDrawerListner{
 
     ImageView icon;
-    Fragment fragment;
-    boolean backtoexit = false;
     Nav_Drawer_Fragment drawerFragment;
     DrawerLayout drawerLayout;
-    String tag = "new General_InfoFragment()";
     FirebaseAuth auth;
     FirebaseUser currentUser;
 
@@ -47,18 +52,31 @@ public class MainActivity extends AppCompatActivity implements Nav_Drawer_Fragme
         auth = FirebaseAuth.getInstance();
         currentUser = auth.getCurrentUser();
 
+
+
         if(currentUser == null){
-            Intent intent = new Intent(MainActivity.this, Login_Activity.class);
-            startActivity(intent);
-            finish();
+
+            auth.signInAnonymously();
         }
+
+        FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        String msg = "Subscribed";
+                        if (!task.isSuccessful()) {
+                            msg = "Subscribe failed";
+                        }
+                        Log.d(TAG, msg);
+                        Toast.makeText(MainActivity.this,msg, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
         drawerFragment = (Nav_Drawer_Fragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         assert drawerFragment != null;
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
         drawerFragment.setDrawerListener(MainActivity.this);
-
-
 
         icon.setOnClickListener(new View.OnClickListener() {
             @Override

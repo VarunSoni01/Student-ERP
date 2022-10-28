@@ -1,6 +1,8 @@
 package com.college.acc_soft.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +33,8 @@ public class General_InfoAdapter extends RecyclerView.Adapter<General_InfoAdapte
     Context context;
     List<General_InfoModel> list;
     FragmentTransaction transaction;
+    String url;
+    Intent intent;
 
     public General_InfoAdapter(Context context, List<General_InfoModel> list) {
         this.context = context;
@@ -106,7 +110,21 @@ public class General_InfoAdapter extends RecyclerView.Adapter<General_InfoAdapte
                             transaction.commit();
                             break;
 
-                        
+                        case 6:
+                            url = "http://150.129.144.226/Accsoft_PIEMR/Grievance/G_Entry_Student.aspx";
+                            intent = new Intent(Intent.ACTION_VIEW);
+                            intent.setData(Uri.parse(url));
+                            context.startActivity(intent);
+                            break;
+
+                        case 7:
+                            url = "http://150.129.144.226/Accsoft_PIEMR/Parents/OnlineFormsApprovalStatus.aspx";
+                            intent = new Intent(Intent.ACTION_VIEW);
+                            intent.setData(Uri.parse(url));
+                            context.startActivity(intent);
+                            break;
+
+
                         default:
                             Toast.makeText(itemView.getContext(), "Coming Soon...", Toast.LENGTH_SHORT).show();
                     }

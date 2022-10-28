@@ -2,9 +2,16 @@ package com.college.acc_soft.Adapters;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
+import static androidx.core.app.ActivityCompat.requestPermissions;
+
+import android.Manifest;
 import android.app.DownloadManager;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +20,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.college.acc_soft.MainActivity;
 import com.college.acc_soft.Models.Assignment_Model;
 import com.college.acc_soft.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.io.File;
 import java.util.List;
 
 public class Assignment_Adapter extends RecyclerView.Adapter<Assignment_Adapter.ViewHolder> {
@@ -49,14 +61,19 @@ public class Assignment_Adapter extends RecyclerView.Adapter<Assignment_Adapter.
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Assignment Uploading Coming Soon...", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, MainActivity.class);
+                context.startActivity(intent);
+
             }
         });
 
         holder.download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Toast.makeText(context, "Assignment Downloaded...", Toast.LENGTH_SHORT).show();
-//                downloadfile(context,list.get(pos).getSubject(), ".pptx", DIRECTORY_DOWNLOADS,list.get(pos).getLink());
+                downloadfile(context,list.get(pos).getSubject(), ".pptx", DIRECTORY_DOWNLOADS,list.get(pos).getLink());
 
             }
         });
@@ -84,6 +101,8 @@ public class Assignment_Adapter extends RecyclerView.Adapter<Assignment_Adapter.
     }
 
     public void downloadfile(Context context, String filename, String fileExtension, String destinationDirectory, String url) {
+
+
         DownloadManager dmanager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
         Uri uri = Uri.parse(url);
         DownloadManager.Request req = new DownloadManager.Request(uri);
@@ -93,4 +112,6 @@ public class Assignment_Adapter extends RecyclerView.Adapter<Assignment_Adapter.
         dmanager.enqueue(req);
 
     }
+
+
 }

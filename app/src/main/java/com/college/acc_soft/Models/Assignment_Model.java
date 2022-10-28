@@ -5,6 +5,9 @@ public class Assignment_Model {
     String subject;
     String link;
 
+    public Assignment_Model() {
+    }
+
     public String getLink() {
         return link;
     }
