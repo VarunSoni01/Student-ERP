@@ -11,7 +11,9 @@
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/drawable/list_design.xml" value="0.1325" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/drawable/nav_bar_background.xml" value="0.1" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/drawable/trial.xml" value="0.1325" />
+        <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout-land/fragment_upload__assignment.xml" value="0.34594594594594597" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.15" />
+        <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout-sw600dp/fragment_upload__assignment.xml" value="0.15" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/activity_message.xml" value="0.1606837606837607" />
@@ -54,6 +56,7 @@
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_question__paper.xml" value="0.1641025641025641" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_special__leave__request.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_student__ledger.xml" value="0.2" />
+        <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_student_assignment_upload.xml" value="0.1641025641025641" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_syllabus.xml" value="0.1641025641025641" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_time__table.xml" value="0.2" />
         <entry key="..\:/Users/Win/AndroidStudioProjects/ACC_SOFT2/app/src/main/res/layout/fragment_update__resume.xml" value="0.1641025641025641" />

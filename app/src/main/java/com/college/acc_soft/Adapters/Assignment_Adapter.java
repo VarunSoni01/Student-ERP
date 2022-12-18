@@ -21,8 +21,12 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.college.acc_soft.Fragments.StudentAssignmentUploadFragment;
+import com.college.acc_soft.Fragments.SyllabusFragment;
 import com.college.acc_soft.MainActivity;
 import com.college.acc_soft.Models.Assignment_Model;
 import com.college.acc_soft.R;
@@ -60,9 +64,12 @@ public class Assignment_Adapter extends RecyclerView.Adapter<Assignment_Adapter.
         holder.upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Assignment Uploading Coming Soon...", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(context, MainActivity.class);
-                context.startActivity(intent);
+
+                FragmentTransaction transaction;
+                transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_framelayout, new StudentAssignmentUploadFragment());
+                transaction.addToBackStack(null);
+                transaction.commit();
 
             }
         });
@@ -73,7 +80,7 @@ public class Assignment_Adapter extends RecyclerView.Adapter<Assignment_Adapter.
 
 
                 Toast.makeText(context, "Assignment Downloaded...", Toast.LENGTH_SHORT).show();
-                downloadfile(context,list.get(pos).getSubject(), ".pptx", DIRECTORY_DOWNLOADS,list.get(pos).getLink());
+                downloadfile(context,list.get(pos).getSubject(), ".pdf", DIRECTORY_DOWNLOADS,list.get(pos).getLink());
 
             }
         });

@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements Nav_Drawer_Fragme
     DrawerLayout drawerLayout;
     FirebaseAuth auth;
     FirebaseUser currentUser;
+    int cas = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,13 +102,18 @@ public class MainActivity extends AppCompatActivity implements Nav_Drawer_Fragme
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.main_framelayout, new General_InfoFragment());
+        cas = 0;
         transaction.commit();
 
     }
 
     private void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_framelayout, fragment).addToBackStack(null);
+        transaction.replace(R.id.main_framelayout, fragment);
+        if(cas == 0){
+            transaction.addToBackStack(null);
+            cas = 1;
+        }
         transaction.commit();
     }
 
