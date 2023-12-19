@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/list_design"
+    android:backgroundTint="@color/dark_white"
+    android:elevation="10dp"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/atd_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Internet And Web Technologies"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/atd_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="10dp"
+        android:text="P"
+        android:textColor="@color/blue"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/atd_lec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lecture No. - "
+        android:layout_below="@id/atd_sub"
+        android:textSize="16dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/atd_lec_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/atd_sub"
+        android:layout_toRightOf="@id/atd_lec"
+        android:text="1"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/atd_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/atd_curr_date"
+        android:textStyle="bold"
+        android:text="Date -"
+        android:textColor="@color/blue"
+        android:layout_below="@id/atd_status"/>
+
+    <TextView
+        android:id="@+id/atd_curr_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="07/10/2022"
+        android:textColor="@color/blue"
+        android:layout_below="@id/atd_status"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Attendance_SubWiseFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_white"
+        android:backgroundTint="@color/dark_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/list_design"
+            android:backgroundTint="@color/white"
+            android:elevation="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corners"
+                android:text="SUBJECT WISE ATTENDANCE"
+                android:textColor="@color/blue"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/list_design"
+            android:backgroundTint="@color/dark_white"
+            android:elevation="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/atdsub_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Classes -"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/atdsub_total_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/atdsub_total"
+                android:text="150"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:id="@+id/subpartition"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/atdsub_total"
+                android:layout_margin="3dp"
+                android:background="@color/blue" />
+
+            <TextView
+                android:id="@+id/atdsub_present"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subpartition"
+                android:text="Presents -"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/atdsub_present_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subpartition"
+                android:layout_toRightOf="@id/atdsub_present"
+                android:text="119"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/atdsub_absent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atdsub_present_count"
+                android:text="Absents - "
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/atdsub_absent_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atdsub_present_count"
+                android:layout_toRightOf="@id/atdsub_absent"
+                android:text="24"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/atdsub_leave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subpartition"
+                android:layout_toLeftOf="@id/atdsub_leave_count"
+
+                android:text="Leaves -"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/atdsub_leave_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subpartition"
+                android:layout_alignParentEnd="true"
+                android:text="05"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/atdsub_na"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atdsub_leave_count"
+                android:layout_toLeftOf="@id/atdsub_na_count"
+                android:text="Not Applicable -"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/atdsub_na_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atdsub_leave_count"
+                android:layout_alignParentEnd="true"
+                android:text="02"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/attendancesub_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_white"
+            tools:listitem="@layout/attendancesub_list" />
+
+    </LinearLayout>
+
+
+</ScrollView>

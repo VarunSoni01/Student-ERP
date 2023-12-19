@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="nav_drawer_labels">
+        <item>@string/GeneralInformation</item>
+        <item>@string/FeesInformation</item>
+        <item>@string/Academics</item>
+        <item>@string/Library</item>
+        <item>@string/Placements</item>
+        <item>@string/Acknowledgement</item>
+        <item>@string/admin</item>
+        <item>@string/Logout</item>
+    </string-array>
+
+    <string-array name="general_info_labels">
+        <item>@string/AcademicCalender</item>
+        <item>@string/YourProfile</item>
+        <item>@string/ExaminationPaper</item>
+        <item>@string/QuestionPaper</item>
+        <item>@string/NewsNotice</item>
+        <item>@string/Syllabus</item>
+        <item>@string/HostelNotification</item>
+        <item>@string/Grievance</item>
+        <item>@string/OnlineFormApprovalStatus</item>
+
+    </string-array>
+
+    <string-array name="fee_info_labels">
+        <item>@string/PayFee</item>
+        <item>@string/FeesReceipts</item>
+        <item>@string/StudentLeadger</item>
+        <item>@string/OnlineTransaction</item>
+        <item>@string/FeeChart</item>
+        <item>@string/ApplyHostel</item>
+        <item>@string/OtherLedger</item>
+    </string-array>
+
+    <string-array name="academics_labels">
+        <item>@string/E_Online_Teaching</item>
+        <item>@string/Online_Classes</item>
+        <item>@string/Time_Table</item>
+        <item>@string/Assessment_report</item>
+        <item>@string/Online_test</item>
+        <item>@string/Exams_Results</item>
+        <item>@string/Current_Backlog</item>
+        <item>@string/Subject_filling</item>
+        <item>@string/Registeration_Form</item>
+        <item>@string/assignment</item>
+        <item>@string/Special_Request</item>
+        <item>@string/Data_And_No_Dues</item>
+        <item>@string/Attendace</item>
+        <item>@string/Attendance_Subwise</item>
+    </string-array>
+
+    <string-array name="library_labels">
+        <item>@string/Opac</item>
+        <item>@string/Circular_Ledger</item>
+        <item>@string/Fine_Records</item>
+        <item>@string/Library_Rules</item>
+        <item>@string/Ebook_Center</item>
+    </string-array>
+
+    <string-array name="placement_labels">
+        <item>@string/news</item>
+        <item>@string/placement</item>
+        <item>@string/placementdrive</item>
+        <item>@string/updateresume</item>
+        <item>@string/intershippermission</item>
+    </string-array>
+
+    <string-array name="enrichment_labels">
+        <item>@string/knowledgecenter</item>
+        <item>@string/syll</item>
+        <item>@string/timetable</item>
+    </string-array>
+
+    <string-array name="admin_panel_labels">
+        <item>@string/assignment</item>
+
+    </string-array>
+
+    <style name="roundedimageview" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">40dp</item>
+        <item name="cornerSizeBottomRight">40dp</item>
+        <item name="color">@color/white</item>
+
+
+    </style>
+
+
+
+</resources>

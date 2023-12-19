@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Library_RulesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/lib_rules_image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/list_design"
+            android:backgroundTint="@color/white"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/lib_rules_1" />
+
+        <ImageView
+            android:id="@+id/lib_rules_image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/list_design"
+            android:backgroundTint="@color/white"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/lib_rules_1" />
+
+        <ImageView
+            android:id="@+id/lib_rules_image3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/list_design"
+            android:backgroundTint="@color/white"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/lib_rules_1" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

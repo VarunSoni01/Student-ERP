@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:backgroundTint="@color/dark_white"
+    android:background="@drawable/list_design">
+
+    <TextView
+        android:id="@+id/atdsub_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject Name"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/blue"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/atds_partition"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="5dp"
+        android:layout_below="@id/atdsub_subject"
+        android:background="@color/blue"/>
+
+    <TextView
+        android:id="@+id/atds_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/atds_partition"
+        android:layout_marginStart="5dp"
+        android:text="Present -"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/atds_pre_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/atds_partition"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@id/atds_pre"
+        android:text="10"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/atds_abs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/atds_pre"
+        android:layout_marginStart="5dp"
+        android:text="Absent -"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/atds_abs_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/atds_abs"
+        android:text="10"
+        android:layout_below="@id/atds_pre_count"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/atds_leave"
+        android:layout_below="@id/atds_partition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave -"
+        android:layout_toLeftOf="@id/atds_leave_count"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/atds_leave_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="10"
+        android:layout_below="@id/atds_partition"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="5dp"/>
+
+    <TextView
+        android:id="@+id/atds_na"
+        android:layout_below="@id/atds_leave_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Applicable -"
+        android:layout_toLeftOf="@id/atds_na_count"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/atds_na_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="10"
+        android:layout_below="@id/atds_leave_count"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="5dp"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<resources>
+
+    <string name="app_name">Student ERP System</string>
+    <string name="title_activity_login">Login_Activity</string>
+
+    <string name="GeneralInformation">General Information</string>
+    <string name="FeesInformation">Fees Information</string>
+    <string name="Academics">Academics</string>
+    <string name="Library">Library</string>
+    <string name="Placements">Placements</string>
+    <string name="Acknowledgement">Acknowledgement</string>
+    <string name="admin">Admin Panel</string>
+    <string name="Logout">Logout</string>
+
+    <string name="AcademicCalender">Academic Calender</string>
+    <string name="YourProfile">Your Profile</string>
+    <string name="ExaminationPaper">Examination Paper</string>
+    <string name="QuestionPaper">Question Paper</string>
+    <string name="NewsNotice">News Notice</string>
+    <string name="Syllabus">Syllabus</string>
+    <string name="HostelNotification">Hostel Notification</string>
+    <string name="Grievance">Grievance</string>
+    <string name="OnlineFormApprovalStatus">Online Form Approval Status</string>
+
+    <string name="PayFee">Pay Fee Online</string>
+    <string name="FeesReceipts">Fees Receipts</string>
+    <string name="StudentLeadger">Student Ledger</string>
+    <string name="OnlineTransaction">Online Fee Transaction Status</string>
+    <string name="FeeChart">Fees Installment Chart </string>
+    <string name="ApplyHostel">Apply For Hostel</string>
+    <string name="OtherLedger">Other Ledger</string>
+
+    <string name="E_Online_Teaching">E-Online Teaching Platform</string>
+    <string name="Online_Classes">Online Class Recording</string>
+    <string name="Time_Table">Time Table</string>
+    <string name="Assessment_report">Assessment Report</string>
+    <string name="Online_test">Online Test Portal</string>
+    <string name="Exams_Results">Exam Result</string>
+    <string name="Current_Backlog">Current Backlog</string>
+    <string name="Subject_filling">Subject Choice Filling</string>
+    <string name="Registeration_Form">Registeration Form</string>
+    <string name="assignment">Assignments</string>
+    <string name="Special_Request">Special Leave Request</string>
+    <string name="Data_And_No_Dues">Data And No-Dues Form</string>
+    <string name="Attendace">Attendance Status</string>
+    <string name="Attendance_Subwise">Attendance Subject Wise</string>
+
+    <string name="Opac">OPAC</string>
+    <string name="Circular_Ledger">Circular Ledger</string>
+    <string name="Fine_Records">Fine Records</string>
+    <string name="Library_Rules">Library Rules And Circular</string>
+    <string name="Ebook_Center">EBook Center</string>
+
+    <string name="news">News/Notice</string>
+    <string name="placement">Placements</string>
+    <string name="placementdrive">Placement Drive</string>
+    <string name="updateresume">Update Resume</string>
+    <string name="intershippermission">Intership Permissioin</string>
+
+    <string name="knowledgecenter">Knowledge Center</string>
+    <string name="syll">Syllabus</string>
+    <string name="timetable">Time Table</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="News_Notice_Desc">"Kindly note that the late fee shall be applicable on partial payment @25 per day"</string>
+    <string name="payment_link"><a href="https://paytm.com/education/Madhya%20Pradesh/Indore/Prestige%20Institute%20of%20Engineering%20Management%20and%20Research,%20Indore%20(PIEMR)/Fee%20Payment?utm_source=webutm_medium=smarturlutm_campaign=feewebutm_term=fees\">Direct Payment Click Here</a></string>
+    <string name="channel_name">My_Channel</string>
+    <string name="channel_description">This is my channel discription</string>
+
+
+</resources>

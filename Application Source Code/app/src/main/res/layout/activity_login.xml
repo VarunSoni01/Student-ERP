@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.Login_Activity">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/piemr_image"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:shapeAppearanceOverlay="@style/roundedimageview"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:layout_marginHorizontal="15dp"
+        android:textAlignment="center"
+        android:layout_marginVertical="5dp"
+        android:textSize="25dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello there, Sign In to continue"
+        android:textColor="@color/blue"
+        android:textSize="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/blue"
+        android:layout_marginHorizontal="15dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@drawable/list_design"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        android:checkedButton="@id/sel_stu"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/sel_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:buttonTint="@color/blue"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:textSize="16dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:background="@color/blue"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="40dp"/>
+
+
+        <RadioButton
+            android:id="@+id/sel_stu"
+            android:textStyle="bold"
+            android:buttonTint="@color/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student"
+
+            android:textColor="@color/blue"
+            android:textSize="16dp"/>
+
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blue"
+        android:layout_marginHorizontal="15dp"/>
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/ic_round_person_24"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/box1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/blue"
+            android:hint="Enter Scholar Number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_id"
+                android:paddingStart="50dp"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:layout_below="@id/box1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/ic_round_lock_person_24"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/box1"
+            android:id="@+id/box2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            app:passwordToggleDrawable="@drawable/show_hide"
+            app:passwordToggleEnabled="true"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/blue"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Enter Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_pass"
+                android:textSize="16dp"
+                android:paddingStart="50dp"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/forgot_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="@color/dark_blue"
+            android:text="Forgot Password?" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="15dp"
+            android:padding="5dp"
+            android:text="Login"
+
+            android:backgroundTint="@color/white"
+            android:background="@drawable/corners"
+            android:textColor="@color/white" />
+
+
+</LinearLayout>
